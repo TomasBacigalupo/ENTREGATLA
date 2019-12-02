@@ -13,8 +13,8 @@ Ejemplo de compilacion y de ejecucion de un programa en Lenguaje Aguila
 
 ```
 chmod +x ./compilar.sh
-./compilar.sh test.ag
-./test.ag.out
+./compilar.sh test1.ag
+./test1.ag.out
 ```
 ## Tests
 
