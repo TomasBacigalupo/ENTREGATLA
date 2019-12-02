@@ -1,0 +1,35 @@
+inicio  
+
+hola  = "chau".
+
+si hola < "chau"
+
+imprimir 1.
+
+sino 
+
+imprimir 2.
+
+finsi
+
+si hola <= "chau"
+
+imprimir 1.
+
+sino 
+
+imprimir 2.
+
+finsi
+
+si hola >= "chau"
+
+imprimir 1.
+
+sino 
+
+imprimir 2.
+
+finsi
+
+fin
