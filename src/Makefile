@@ -1,5 +1,5 @@
 GCC=gcc
-GCCFLAGS= -Wall -pedantic -Wno-unused-function -g #-fsanitize=address
+GCCFLAGS= -Wno-cpp -g
 LEX=flex
 YACC=yacc
 YACC_FLAGS= -d

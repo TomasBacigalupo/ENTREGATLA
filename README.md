@@ -1,6 +1,11 @@
 # Lenguaje Aguila
 ## Instrucciones
-Primero se debe compilar el codigo fuente del compilador entrando a la carpeta `src` y corriendo el comando `make`
+Primero se debe compilar el compilador
+
+```
+chmod +x ./setup.sh
+./setup.sh
+```
 
 ## Ejemplos
 
