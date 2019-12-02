@@ -95,12 +95,12 @@ STATEMENT   : PRINT EXPRESSION END_LINE {
                 }
             }
             | END_LINE {$$ = new_node(STRING_TYPE, "\n");}
-            | ASSIGNMENT END_LINE { printf("%s", $1->string); $$ = new_node($1->type, $1->string);}
+            | ASSIGNMENT END_LINE { $$ = new_node($1->type, $1->string);}
             | DEFINITION END_LINE {$$ = new_node($1->type, $1->string);}
             | IF CONDITION CODE ENDIF {$$ = new_node($2->type,strcat_va(6,"if(",$2->string,")","{\n",$3->string,"\n}"));}
             | IF CONDITION CODE ELSE CODE ENDIF { $$ = new_node($2->type, strcat_va(8,"if(", $2->string, "){\n", $3->string, "\n}", "else{\n", $5->string,"}")); }
             | WHILE CONDITION CODE ENDCYCLE
-{$$ = new_node(STRING_TYPE,strcat_va(5,"while(",$2->string,")\n","{", $3->string ,"};\n"));}
+{$$ = new_node(STRING_TYPE,strcat_va(6,"while(",$2->string,")\n","{", $3->string ,"};\n"));}
             ;
 
 ASSIGNMENT : CAMBIO ID EQUALS EXPRESSION {
