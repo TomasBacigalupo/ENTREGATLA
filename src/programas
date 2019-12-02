@@ -1,0 +1,22 @@
+incio
+    cont = 1.
+    mientras cont < 100
+        cambio cont = cont +1.
+    finciclo
+    imprimir cont.
+fin
+
+
+inicio
+    si (10 < 5 y 10 < 6)
+        imprimir "algo salio mal".
+    sino
+        imprimir "ok".
+    finsi
+fin
+
+inicio
+    decripcion = "cuenta dificil".
+    cuenta = 10 + 50 sobre 100.
+    imprimir cuenta.
+fin

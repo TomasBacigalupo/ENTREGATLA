@@ -1,0 +1,7 @@
+inicio
+si 10 <= 5
+algo = 1.
+sino
+algo = 2.
+finsi
+fin

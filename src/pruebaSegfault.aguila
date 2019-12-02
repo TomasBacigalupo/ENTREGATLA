@@ -1,0 +1,7 @@
+inicio
+si 10 < 5
+var = 1.
+sino
+vara = 1.
+finsi
+fin
