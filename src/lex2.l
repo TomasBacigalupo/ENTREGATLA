@@ -18,6 +18,7 @@ exit    ("terminar")
 
 
 %%
+"igual"         {return SAME;}
 "cambio"        {return CAMBIO;}
 "text"          {return TEXT_T;}
 "number"        {return NUMBER_T;}
