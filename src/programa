@@ -1,7 +1,9 @@
 inicio
-si 10 <= 5
-algo = 1.
+a=1.
+b=2.
+si a < b
+imprimir “a es menor a b”.
 sino
-algo = 2.
+imprimir “b es menor a a”.
 finsi
 fin
