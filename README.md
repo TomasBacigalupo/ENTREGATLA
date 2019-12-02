@@ -1,6 +1,11 @@
 # Lenguaje Aguila
 ## Instrucciones
-Primero se debe compilar el codigo fuente del compilador entrando a la carpeta `src` y corriendo el comando `make`
+Primero se debe compilar el compilador
+
+```
+chmod +x ./setup.sh
+./setup.sh
+```
 
 ## Ejemplos
 
@@ -8,8 +13,8 @@ Ejemplo de compilacion y de ejecucion de un programa en Lenguaje Aguila
 
 ```
 chmod +x ./compilar.sh
-./compilar.sh test.ag
-./test.ag.out
+./compilar.sh test1.ag
+./test1.ag.out
 ```
 ## Tests
 
