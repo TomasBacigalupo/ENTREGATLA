@@ -167,7 +167,7 @@ EXPRESSION  : TERM  {$$ = $1;}
             |EXPRESSION PLUS EXPRESSION{
                 //same_type(get_symbol_type($1->string),$3->type);
                 if($3->type == STRING_TYPE){
-                $$ = new_node(STRING_TYPE, strcat_va(5,"concat(",$1->string,",",$3->string,")"));
+                $$ = new_node(STRING_TYPE, strcat_va(5,"strcat(",$1->string,",",$3->string,")"));
                 }else{
                     $$ = new_node(NUM_TYPE, strcat_va(5,"(",$1->string,")+(",$3->string,")"));
                 }}
