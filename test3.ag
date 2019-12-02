@@ -1,9 +1,10 @@
 inicio
-imprimir "suma de cadenas".
-varA = "h".
-varB = "o".
-varC = "l".
-varD = "a".
-cambio varA = varA + varB + varC + varD.
-imprimir varA.
+imprimir "comparacion de cadenas".
+varA = "verdad".
+varB = "verdad".
+varC = "falso".
+varD = "falso".
+si varA igual varC
+imprimir "comparando mal".
+finsi
 fin

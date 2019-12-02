@@ -105,7 +105,11 @@ STATEMENT   : PRINT EXPRESSION END_LINE {
 
 ASSIGNMENT : CAMBIO ID EQUALS EXPRESSION {
             //same_type(get_type($2->string),$4->type); //TODO
-            $$ = new_node($4->type,strcat_va(4,$2->string,"=",$4->string,";\n"));};
+            if(get_symbol_type($2->string) == NUM_TYPE || $2->type == NUM_TYPE ){
+            $$ = new_node(NUM_TYPE,strcat_va(4,$2->string,"=",$4->string,";\n"));
+            }else{
+            $$ = new_node($4->type,strcat_va(4,$2->string,"=",$4->string,";\n"));
+            }};
 
 
 
@@ -166,6 +170,7 @@ CONDITION : EXPRESSION SAME EXPRESSION  {
 EXPRESSION  : TERM  {$$ = $1;}
             |EXPRESSION PLUS EXPRESSION{
                 //same_type(get_symbol_type($1->string),$3->type);
+
                 if($3->type == STRING_TYPE){
                 $$ = new_node(STRING_TYPE, strcat_va(5,"strcat(",$1->string,",",$3->string,")"));
                 }else{
