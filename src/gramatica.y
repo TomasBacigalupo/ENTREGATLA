@@ -73,7 +73,7 @@
 %%
 
 PROGRAM : MAIN CODE END {
-                        printf("int main(){\n");
+                        printf("#include <stdio.h>\n#include <string.h>\nint main(){\n");
                         printf("%s", $2->string);
                         printf("}\n");
                         exit(EXIT_SUCCESS);
