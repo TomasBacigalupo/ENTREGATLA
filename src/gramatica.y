@@ -134,28 +134,28 @@ CONDITION : EXPRESSION SAME EXPRESSION  {
            | EXPRESSION GT EXPRESSION      {
            //same_type(get_symbol_type($1->string),$3->type);
            if($3->type==STRING_TYPE)
-            $$ = new_node(STRING_TYPE, strcat_va(5, "(strcmp(", $1->string, ",", $3->string, ")>0)"));
+            $$ = new_node(STRING_TYPE, strcat_va(7, "(strcmp(","\"", $1->string,"\"", ",", $3->string, ")>0)"));
            else
             $$ = new_node(STRING_TYPE, strcat_va(5, "(", $1->string, " > ", $3->string, ")"));
            }
            | EXPRESSION GET EXPRESSION     {
            //same_type(get_symbol_type($1->string),$3->type);
            if($3->type==STRING_TYPE)
-            $$ = new_node(STRING_TYPE, strcat_va(5, "(strcmp(", $1->string, ",", $3->string, ")>=0)"));
+            $$ = new_node(STRING_TYPE, strcat_va(7, "(strcmp(","\"", $1->string,"\"", ",", $3->string, ")>=0)"));
            else
             $$ = new_node(STRING_TYPE, strcat_va(5, "(", $1->string, " >= ", $3->string, ")"));
            }
            | EXPRESSION LT EXPRESSION      {
             //same_type(get_symbol_type($1->string),$3->type);
            if($3->type == STRING_TYPE)
-            $$ = new_node(STRING_TYPE, strcat_va(5, "(strcmp(", $1->string, ",", $3->string, ")<0)"));
+            $$ = new_node(STRING_TYPE, strcat_va(7, "(strcmp(", "\"",$1->string,"\"", ",", $3->string, ")<0)"));
            else
             $$ = new_node(STRING_TYPE, strcat_va(5, "(", $1->string, "<", $3->string, ")"));
            }
            | EXPRESSION LET EXPRESSION     {
            //same_type(get_symbol_type($1->string),$3->type);
            if($3->type==STRING_TYPE)
-            $$ = new_node(STRING_TYPE, strcat_va(5, "(strcmp(", $1->string, ",", $3->string, ")<=0)"));
+            $$ = new_node(STRING_TYPE, strcat_va(7, "(strcmp(","\"" ,$1->string,"\"", ",", $3->string, ")<=0)"));
            else
             $$ = new_node(STRING_TYPE, strcat_va(5, "(", $1->string, " <= ", $3->string, ")"));
            }
