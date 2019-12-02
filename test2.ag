@@ -1,0 +1,10 @@
+inicio
+imprimir "prueba de ciclo".
+cont = 0.
+
+mientras cont < 10
+cambio cont = cont +1.
+imprimir 1.
+finciclo
+
+fin

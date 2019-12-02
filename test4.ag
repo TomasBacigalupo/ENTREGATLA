@@ -1,0 +1,22 @@
+inicio
+imprimir "testeo de condicionales".
+si 10 < 5
+imprimir "error".
+finsi
+si 10 <= 5
+imprimir "error".
+finsi
+si 10 > 50
+imprimir "error".
+finsi
+si 10 >= 50
+imprimir "error".
+finsi
+si (10 < 5 o 10 < 5)
+imprimir "error".
+finsi
+si (10 < 5 y 10 < 5)
+imprimir "error".
+finsi
+imprimir "sin errores".
+fin
